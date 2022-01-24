@@ -29,6 +29,7 @@ public class Exercice1 {
 		double prix2 = clavier.nextDouble();
 		double prix3 = clavier.nextDouble();
 		
+		
 		//Ajout de la classe de gestion des données
 		GestionnaireProduits.initialiserProduit(p1, nom1, prix1);
 		GestionnaireProduits.initialiserProduit(p2, nom2, prix2);

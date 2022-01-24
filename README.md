@@ -1,3 +1,3 @@
 # INF111-OOP
 
-# All l;abs and assignments done in the course INF111. 
+## All labs and assignments done in the course INF111. 

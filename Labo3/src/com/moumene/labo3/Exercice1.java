@@ -12,32 +12,39 @@ public class Exercice1 {
 	
 	public static void main(String args[]) {
 		
-		//Enregistrement Produit
+		/*Exercice1: créez 3 produits avec cette méthode. Affichez à chaque
+		 * fois les numéro, nom et prix du produit créé.
+		 */
+		
+		//Creation de 3 produits
 		Produit p1 = ProduitFactory.getNouveauProduit();
 		Produit p2 = ProduitFactory.getNouveauProduit();
 		Produit p3 = ProduitFactory.getNouveauProduit();
 		
-		//Initialisation noms
+		//Demander les noms
 		System.out.println("Trois noms: ");
-		String nom1 = clavier.nextLine();
-		String nom2 = clavier.nextLine();
-		String nom3 = clavier.nextLine();
+		p1.nom = clavier.nextLine();
+		p2.nom = clavier.nextLine();
+		p3.nom = clavier.nextLine();
+		System.out.print("\n");
 		
-		//Initialisations prix:
-		System.out.println("Trois prix: ");
-		double prix1 = clavier.nextDouble();
-		double prix2 = clavier.nextDouble();
-		double prix3 = clavier.nextDouble();
+		//Demander les prix
+		System.out.print("Troix prix: ");
+		p1.prix = clavier.nextDouble();
+		p2.prix = clavier.nextDouble();
+		p3.prix = clavier.nextDouble();
+		clavier.nextLine();
+		System.out.print("\n");
 		
+		//Creer les 3 produits
+		GestionnaireProduits.initialiserProduit(p1, p1.nom, p1.prix);
+		GestionnaireProduits.initialiserProduit(p2, p2.nom, p2.prix);
+		GestionnaireProduits.initialiserProduit(p3, p3.nom, p3.prix);
 		
-		//Ajout de la classe de gestion des données
-		GestionnaireProduits.initialiserProduit(p1, nom1, prix1);
-		GestionnaireProduits.initialiserProduit(p2, nom2, prix2);
-		GestionnaireProduits.initialiserProduit(p3, nom3, prix3);
+		//Afficher les 3 Produits
+		System.out.print(""+p1.numero+" "+p1.nom+" "+p1.prix+"\n");
+		System.out.print(""+p2.numero+" "+p2.nom+" "+p2.prix+"\n");
+		System.out.print(""+p3.numero+" "+p3.nom+" "+p3.prix+"\n");
 		
-		//Affichage données
-		System.out.println(p1.numero+" "+p1.nom+" "+p1.prix+"");
-		System.out.println(p2.numero+" "+p2.nom+" "+p2.prix+"");
-		System.out.println(p3.numero+" "+p3.nom+" "+p3.prix+"");
 	}
 }

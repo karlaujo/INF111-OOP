@@ -62,12 +62,12 @@ public class GestionnaireProduits {
 		for (int i = 0; i < magasin.nombreProduits; i++) {
 			if (magasin.listeProduits[i].numero ==  numero)
 			{
-				 chercheProduit = magasin.listeProduits[i];
+				 return magasin.listeProduits[i];
 			}
 			
 		}
 		
-		return chercheProduit;
+		return null;
 	}
 	
 	/* Exercice 8: Ajoutez à la classe GestionnaireProduits une méthode getProduitsCoutantEntre()
@@ -88,5 +88,8 @@ public class GestionnaireProduits {
 		return resultatFiltre;	
 	}
 	
+	public static void afficherProduit(Produit produit) {
+		System.out.print(produit.numero+" "+produit.nom+" "+produit.prix+"$");
+	}
 
 }

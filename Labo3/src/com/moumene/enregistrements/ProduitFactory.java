@@ -10,6 +10,7 @@ public class ProduitFactory {
 		prochainNumeroDeProduit++;
 		return p;
 	}
+	
 	/*
 	 * Exercice 3: Ajoutez à la classe ProduitFactory une méthode getNouveauMagasin() qui s’occupe de
 	 * créer un magasin à partir de son nom et sa taille. La taille d’un magasin est le nombre

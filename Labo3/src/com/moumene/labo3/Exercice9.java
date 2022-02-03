@@ -56,19 +56,31 @@ public class Exercice9 {
 				case 'n':
 					System.out.println("Recherche par Numero");
 					System.out.print("Numero produit: ");
-					int num = clavier.nextInt();
+					int numero = clavier.nextInt();
 					clavier.nextLine();
-					GestionnaireProduits.getProduitParNumero(magasin, num);
+					System.out.print(GestionnaireProduits.getProduitParNumero(magasin, numero).nom);
 					break;
 				case 'p':
 					System.out.println("Recherche par Prix");
 					System.out.print("Prix minimum: ");
 					double min = clavier.nextDouble();
-					
+					clavier.nextLine();
 					System.out.print("Prix maximum: ");
 					double max = clavier.nextDouble();
+					clavier.nextLine();
+					Produit []liste = GestionnaireProduits.getProduitsCoutantEntre(magasin, min, max);
+					if (liste == null) {
+						System.out.println("Aucun produit entre: "+min+"$ et "+max+"$");
+					}
 					
-					GestionnaireProduits.getProduitsCoutantEntre(magasin, min, max);
+					else
+					{
+						System.out.println("Produits trouves: ");
+						for (int j=0; j<liste.length;j++) {
+ 
+							System.out.println();
+						}
+					}
 					break;
 				default:
 					System.out.println("Opération inconnue...");

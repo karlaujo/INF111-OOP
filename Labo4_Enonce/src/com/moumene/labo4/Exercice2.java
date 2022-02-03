@@ -19,14 +19,16 @@ public class Exercice2 {
 			points[i] = PointFactory.getNewPoint(abscisses[i], ordonnees[i]);
 
 		//On affiche le tableau de points avant le tri :
+		System.out.print("Liste points: ");
 		for (i=0;i<points.length;i++)
-			System.out.print(PointsUtil.toString(points[i])+" ");
+			System.out.println(PointsUtil.toString(points[i])+" ");
+		System.out.println();
 		
 		PointsUtil.trier(points);
 		
 		//On affiche le tableau de points après le tri :
 		for (i=0;i<points.length;i++)
-			System.out.print(PointsUtil.toString(points[i])+" ");		
+			System.out.println(PointsUtil.toString(points[i])+" ");		
 	}
 
 }
